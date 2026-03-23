@@ -2,6 +2,7 @@
   "database": "dolt",
   "backend": "dolt",
   "dolt_mode": "server",
+  "dolt_server_port": 3307,
   "dolt_database": "diet_apps",
   "project_id": "8e6a4c8e-7e92-4193-bf91-6d0ff09d09b7"
 }
