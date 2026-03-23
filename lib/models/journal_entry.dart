@@ -24,4 +24,11 @@ class JournalEntry {
         content: map['content'] as String,
         createdAt: map['created_at'] as String,
       );
+
+  JournalEntry copyWith({String? content}) => JournalEntry(
+        id: id,
+        type: type,
+        content: content ?? this.content,
+        createdAt: createdAt,
+      );
 }

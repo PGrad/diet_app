@@ -1,0 +1,56 @@
+Running `(cd /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/; ANDROID_HOME=/Users/pgrad/Library/Android/sdk TMPDIR=/var/folders/qy/n1jsts5x26n25z1pvjh6t1bh0000gn/T/ PATH=/Users/pgrad/Library/flutter/bin:/Users/pgrad/.local/share/mise/installs/ruby/3.4.7/bin:/Users/pgrad/.local/bin:/Users/pgrad/go:/Users/pgrad/.nvm/versions/node/v24.10.0/bin:/Users/pgrad/Library/Python/3.9/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Visual Studio Code.app/Contents/Resources/app/bin HOME=/Users/pgrad /Users/pgrad/Library/flutter/bin/cache/dart-sdk/bin/dart --packages=/Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/package_config.json /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/objective_c/5f31b8d621/hook.dill --config=/Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/objective_c/5f31b8d621/input.json )`.
+INFO: 2026-03-23 15:51:38.478473: Running `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --version`.
+
+INFO: 2026-03-23 15:51:38.569952: Running `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --version`.
+
+INFO: 2026-03-23 15:51:38.580178: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/include/dart_api_dl.c -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-03-23 15:51:38.580434: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c.c -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o
+
+INFO: 2026-03-23 15:51:38.580586: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/test/util.c -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/test/util.c.o
+
+INFO: 2026-03-23 15:51:38.580677: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/input_stream_adapter.m -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-03-23 15:51:38.580763: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c.m -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.m.o
+
+INFO: 2026-03-23 15:51:38.580978: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/observer.m -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/observer.m.o
+
+INFO: 2026-03-23 15:51:38.581299: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/pgrad/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c_bindings_generated.m -fpic -I src -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-03-23 15:51:38.653754: 
+INFO: 2026-03-23 15:51:38.653947: 
+
+app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o
+
+INFO: 2026-03-23 15:51:38.654315: 
+INFO: 2026-03-23 15:51:38.654342: 
+INFO: 2026-03-23 15:51:38.654375: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/test/util.c.o
+
+INFO: 2026-03-23 15:51:38.655986: 
+INFO: 2026-03-23 15:51:38.656018: 
+INFO: 2026-03-23 15:51:38.656027: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-03-23 15:51:38.661560: 
+INFO: 2026-03-23 15:51:38.661572: 
+INFO: 2026-03-23 15:51:38.661580: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/protocol.m.o
+
+INFO: 2026-03-23 15:51:38.804858: 
+INFO: 2026-03-23 15:51:38.804898: 
+INFO: 2026-03-23 15:51:38.804908: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/ns_number.m.o
+
+INFO: 2026-03-23 15:51:38.811071: 
+INFO: 2026-03-23 15:51:38.811083: 
+INFO: 2026-03-23 15:51:38.811091: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.m.o
+
+ter.m.o
+
+INFO: 2026-03-23 15:51:38.818134: 
+INFO: 2026-03-23 15:51:38.818167: 
+INFO: 2026-03-23 15:51:38.818178: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-03-23 15:51:38.818451: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -shared -Wl,-encryptable -undefined dynamic_lookup -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target x86_64-apple-darwin -mmacos-version-min=13 /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/include/dart_api_dl.c.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.c.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/test/util.c.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/input_stream_adapter.m.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c.m.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/observer.m.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/ns_number.m.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/protocol.m.o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/obj/src/objective_c_bindings_generated.m.o -o /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/objective_c.dylib
+
+INFO: 2026-03-23 15:51:38.918966: 
+INFO: 2026-03-23 15:51:38.919017: 
+INFO: 2026-03-23 15:51:38.919028: Generated /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/5f31b8d621/objective_c.dylib
+

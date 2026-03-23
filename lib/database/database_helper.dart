@@ -47,4 +47,27 @@ class DatabaseHelper {
     );
     return maps.map(JournalEntry.fromMap).toList();
   }
+
+  Future<int> updateEntry(JournalEntry entry) async {
+    final db = await database;
+    return db.update(
+      'entries',
+      entry.toMap(),
+      where: 'id = ?',
+      whereArgs: [entry.id],
+    );
+  }
+
+  Future<JournalEntry?> getTodayEntryByType(String type) async {
+    final db = await database;
+    final today = DateTime.now().toIso8601String().substring(0, 10);
+    final maps = await db.query(
+      'entries',
+      where: 'type = ? AND created_at LIKE ?',
+      whereArgs: [type, '$today%'],
+      limit: 1,
+    );
+    if (maps.isEmpty) return null;
+    return JournalEntry.fromMap(maps.first);
+  }
 }

@@ -2,24 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../database/database_helper.dart';
 import '../models/journal_entry.dart';
-import 'history_screen.dart';
 
 class JournalScreen extends StatefulWidget {
-  final String type; // 'food' or 'symptoms'
+  final String type;
+  final JournalEntry? existingEntry;
 
-  const JournalScreen({super.key, required this.type});
+  const JournalScreen({super.key, required this.type, this.existingEntry});
 
   @override
   State<JournalScreen> createState() => _JournalScreenState();
 }
 
 class _JournalScreenState extends State<JournalScreen> {
-  final _controller = TextEditingController();
+  late final TextEditingController _controller;
   final _db = DatabaseHelper();
   bool _saving = false;
 
+  bool get _isEditing => widget.existingEntry != null;
+
   String get _title =>
       widget.type == 'food' ? 'Food Journal' : 'Symptoms Journal';
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController(
+      text: widget.existingEntry?.content ?? '',
+    );
+  }
 
   Future<void> _submit() async {
     final text = _controller.text.trim();
@@ -27,19 +37,23 @@ class _JournalScreenState extends State<JournalScreen> {
 
     setState(() => _saving = true);
 
-    await _db.insertEntry(JournalEntry(
-      type: widget.type,
-      content: text,
-      createdAt: DateTime.now().toIso8601String(),
-    ));
+    if (_isEditing) {
+      await _db.updateEntry(widget.existingEntry!.copyWith(content: text));
+    } else {
+      await _db.insertEntry(JournalEntry(
+        type: widget.type,
+        content: text,
+        createdAt: DateTime.now().toIso8601String(),
+      ));
+    }
 
-    _controller.clear();
     setState(() => _saving = false);
 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Entry saved!')),
+        SnackBar(content: Text(_isEditing ? 'Entry updated!' : 'Entry saved!')),
       );
+      Navigator.pop(context);
     }
   }
 
@@ -51,21 +65,13 @@ class _JournalScreenState extends State<JournalScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final entryDate = widget.existingEntry != null
+        ? DateTime.parse(widget.existingEntry!.createdAt)
+        : DateTime.now();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.history),
-            tooltip: 'View history',
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => HistoryScreen(type: widget.type),
-              ),
-            ),
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -73,7 +79,7 @@ class _JournalScreenState extends State<JournalScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              DateFormat('EEEE, MMMM d, yyyy').format(DateTime.now()),
+              DateFormat('EEEE, MMMM d, yyyy').format(entryDate),
               style: Theme.of(context).textTheme.titleMedium,
               textAlign: TextAlign.center,
             ),
@@ -105,7 +111,10 @@ class _JournalScreenState extends State<JournalScreen> {
                       width: 20,
                       child: CircularProgressIndicator(strokeWidth: 2),
                     )
-                  : const Text('Submit', style: TextStyle(fontSize: 18)),
+                  : Text(
+                      _isEditing ? 'Update' : 'Submit',
+                      style: const TextStyle(fontSize: 18),
+                    ),
             ),
           ],
         ),

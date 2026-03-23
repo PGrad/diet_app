@@ -1,0 +1,1 @@
+ /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/flutter_build/519bafeb4f85886a8e69744eb75aeb8a/native_assets.json:  /Users/pgrad/projects/diet_app/diet_app/mayor/rig/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/objective_c.dylib
