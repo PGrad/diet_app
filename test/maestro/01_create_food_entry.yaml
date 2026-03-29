@@ -1,0 +1,41 @@
+appId: com.example.dietApps
+---
+# Create
+- launchApp:
+    clearState: true
+- assertVisible: "Food Journal"
+- scrollUntilVisible:
+    element:
+      text: "New Entry"
+    direction: RIGHT
+- tapOn:
+    text: "New Entry"
+    index: 0
+- assertVisible: "Food Journal"
+- assertVisible: "What did you eat today?"
+- tapOn:
+    text: "What did you eat today?"
+- inputText: "Oatmeal with berries and honey"
+- tapOn: "Submit"
+- assertVisible: "Daily Journal"
+- assertVisible:
+    text: ".*Oatmeal with berries.*"
+
+# Update
+- tapOn: "Today.*"
+- assertVisible: "Food Journal"
+- assertVisible: "Update"
+- tapOn: "Oatmeal with berries and honey"
+- tapOn: "Oatmeal with berries and honey"
+- tapOn: "Select All"
+- eraseText
+- inputText: "Updated: Granola and yogurt"
+- tapOn: "Update"
+- assertVisible: "Daily Journal"
+- assertVisible: ".*Updated: Granola.*"
+
+# entries should persist when killing and re-opening app
+- killApp
+- launchApp
+- assertVisible: "Daily Journal"
+- assertVisible: ".*Updated: Granola.*"

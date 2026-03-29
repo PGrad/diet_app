@@ -1,0 +1,13 @@
+appId: com.example.dietApps
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Daily Journal"
+- assertVisible: "Food Journal"
+- assertVisible: "Symptoms Journal"
+- assertVisible:
+    text: "New Entry"
+    index: 0
+- assertVisible:
+    text: "New Entry"
+    index: 1

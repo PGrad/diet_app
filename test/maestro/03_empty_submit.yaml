@@ -1,0 +1,12 @@
+appId: com.example.dietApps
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    text: "New Entry"
+    index: 0
+- assertVisible: "Food Journal"
+# Submit immediately without entering any text
+- tapOn: "Submit"
+# App does not allow empty input
+- assertVisible: "Food Journal"

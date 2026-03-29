@@ -1,0 +1,21 @@
+appId: com.example.dietApps
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Symptoms Journal"
+- scrollUntilVisible:
+    element:
+      text: "New Entry"
+      index: 1
+    direction: RIGHT
+- tapOn:
+    text: "New Entry"
+    index: 1
+- assertVisible: "Symptoms Journal"
+- assertVisible: "How are you feeling?"
+- tapOn:
+    text: "How are you feeling?"
+- inputText: "Mild headache after lunch, feeling tired"
+- tapOn: "Submit"
+- assertVisible: "Daily Journal"
+- assertVisible: ".*Mild headache.*"

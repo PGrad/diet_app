@@ -1,0 +1,29 @@
+appId: com.example.dietApps
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    text: "New Entry"
+    index: 0
+- assertVisible: "Food Journal"
+- tapOn:
+    text: "What did you eat today?"
+- inputText: "This entry will not be saved"
+- tapOn:
+    text: "Back"
+- assertVisible: "Daily Journal"
+- assertNotVisible: "This entry will not be saved"
+
+# Swipe back from left edge without saving
+- tapOn:
+    text: "New Entry"
+    index: 0
+- assertVisible: "Food Journal"
+- tapOn:
+    text: "What did you eat today?"
+- inputText: "This entry will also not be saved"
+- swipe:
+    start: "0%, 50%"
+    end: "75%, 50%"
+- assertVisible: "Daily Journal"
+- assertNotVisible: "This entry will also not be saved"
